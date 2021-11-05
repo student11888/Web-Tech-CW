@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
+    <title>Fast Pay</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1><a href="index.html">Fast Pay</a></h1>
+      </div>
+      <form action="#" class="search">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Search services..."
+        />
+        <button class="search-btn">
+          <i class="fal fa-search"></i>
+        </button>
+      </form>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item pay-now">
+            <a class="nav-link" href="pay.html">Pay now</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="register">
+      <div class="register-container">
+        <div class="sign-in-photo container-text">
+          <h1>Create an account</h1>
+          <p>
+            Hello, friend welcome to our community. Fill in the form and become
+            our member!
+          </p>
+          <button class="btn-text btn-sign-up">Sign up</button>
+        </div>
+        <div class="sign-in-input container-input">
+          <form class="register-form">
+            <h1 class="heading__primary">Sign In</h1>
+            <label class="label" for="sign-in">Email or username</label>
+            <input
+              class="input"
+              type="text"
+              id="sign-in"
+              placeholder="Enter email or username"
+            />
+            <label class="label" for="sign-in-password">Password</label>
+            <input
+              class="input"
+              type="password"
+              id="sign-in-password"
+              placeholder="Password"
+            />
+            <a class="link" href="#">Forget password?</a>
+            <button class="btn__primary">Sign in</button>
+            <p class="register-paragraph">
+              Don't have an account? <span class="btn-sign-up">Sign up </span>
+            </p>
+          </form>
+        </div>
+
+        <div class="sign-up-input container-input">
+          <form class="register-form">
+            <h3 class="heading__primary">Sign Up</h3>
+            <label class="label" for="sign-up">Telephone number</label>
+            <input
+              class="input"
+              type="tel"
+              placeholder="Enter telephone number"
+            />
+            <label class="label" for="sign-up">Enter your email</label>
+            <input
+              class="input"
+              type="text"
+              id="sign-up"
+              placeholder="Enter your email"
+            />
+            <label class="label" for="sign-up-password">Password</label>
+            <input
+              class="input"
+              type="password"
+              id="sign-up-password"
+              placeholder="Password"
+              required
+            />
+            <button class="btn__primary">Sign up</button>
+            <p class="register-paragraph">
+              Already have an account? <span class="btn-sign-in"> Sign in</span>
+            </p>
+          </form>
+        </div>
+        <div class="sign-up-photo container-text">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us, please enter your personal details</p>
+          <button class="btn-text btn-sign-in">Sign in</button>
+        </div>
+      </div>
+    </section>
+    <script defer src="register.js"></script>
+  </body>
+</html>

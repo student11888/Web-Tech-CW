@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
+    <title>Fast Pay</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1><a href="index.html">Fast Pay</a></h1>
+      </div>
+      <form action="#" class="search">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Search services..."
+        />
+        <button class="search-btn">
+          <i class="fal fa-search"></i>
+        </button>
+      </form>
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+          <li class="nav-item pay-now">
+            <a class="nav-link" href="pay.html">Pay now</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="pay">
+      <div class="pay-container">
+        <div class="img-container">
+          <img src="./img/payment.png" alt="payment" class="payment-img" />
+        </div>
+        <label class="pay-label" for="pay-type">Choose type of payment:</label>
+        <select id="pay-type" class="input">
+          <option class="select-placeholder">
+            --Please select payment type--
+          </option>
+          <option value="dog">Mobile</option>
+          <option value="cat">Electric</option>
+          <option value="hamster">Gas</option>
+          <option value="parrot">Water</option>
+          <option value="spider">Education</option>
+          <option value="goldfish">Currency exchange</option>
+        </select>
+        <form class="pay-form">
+          <label class="pay-label" for="ccn">Credit Card Number:</label>
+          <label class="pay-label" for="expiry-date">Expiry date:</label>
+          <input
+            id="ccn"
+            type="tel"
+            inputmode="numeric"
+            maxlength="19"
+            placeholder=" Card number"
+            class="input input__card"
+          />
+          <input
+            id="expiry-date"
+            type="tel"
+            class="input input__ex"
+            placeholder=" MM / YY"
+            autocomplete="off"
+          />
+          <label class="pay-label" for="amount">Enter amount:</label>
+          <input
+            type="tel"
+            class="input input__amount"
+            autocomplete="off"
+            placeholder="Enter amount"
+          />
+          <button class="btn__primary">Pay</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="logo footer__logo">
+          <h1><a href="index.html" class="footer__logo">Fast Pay</a></h1>
+        </div>
+        <div class="footer__box">
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul>
+            <li class="footer-item">
+              <a class="footer-link" href="index.html">Home</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="about.html">About us</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="service.html">Services</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="contact.html">Contact us</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="#">Find us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__box">
+          <h3 class="footer__heading">Services</h3>
+          <ul>
+            <li class="footer-item">
+              <a class="footer-link" href="#">Mobile</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="#">Penalties</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="#">Education</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="">Transport</a>
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="#">Communal</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__box">
+          <h3 class="footer__heading">Social Links</h3>
+          <ul>
+            <li class="footer-item">
+              <i class="fab fa-instagram"></i>
+              <a class="footer-link" href="#">Instagram</a>
+            </li>
+            <li class="footer-item">
+              <i class="fab fa-telegram-plane"></i>
+              <a class="footer-link" href="#">Telegram</a>
+            </li>
+            <li class="footer-item">
+              <i class="fab fa-twitter"></i>
+              <a class="footer-link" href="">Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal-text">All rights reserved 2021 &reg;</p>
+    </footer>
+  </body>
+</html>
