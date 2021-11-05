@@ -828,8 +828,8 @@ body {
   color: var(--color-grey);
   margin: 1rem 0;
 }
-.pay-label:nth-child(1) {
-  grid-column: 1 / 2;
+.pay-label {
+  grid-column: 1 / 3;
 }
 
 .input__ex,
