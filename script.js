@@ -1,3 +1,33 @@
+// Functions
+const validator = function (form, input, length) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+  input.addEventListener("input", () => {
+    if (
+      input.value.length < length ||
+      input.value.length > length ||
+      input.value.length == 0
+    ) {
+      input.style.borderColor = "red";
+      input.style.borderWidth = "2px";
+      document.querySelectorAll(".warning")[0].style.opacity = "1";
+    } else {
+      input.style.borderColor = "#49bcf6";
+      document.querySelectorAll(".warning")[0].style.opacity = "0";
+    }
+  });
+};
+
+const hamburgerIcon = document.querySelector(".hamburger-menu");
+const navigation = document.querySelector(".navigation");
+hamburgerIcon.addEventListener("click", function () {
+  navigation.classList.toggle("show");
+});
+
+window.addEventListener("load", () => {
+  // navigation.classList.add("hidden");
+});
 if (document.URL.includes("about.html")) {
   const slides = document.querySelectorAll(".slide");
   const btnLeft = document.querySelector(".left_btn");
@@ -31,86 +61,112 @@ if (document.URL.includes("about.html")) {
   btnRight.addEventListener("click", nextSlide);
   goToSlide(0);
 }
-// Pay form
+// Contact page
+if (document.URL.includes("contact.html")) {
+  const contactForm = document.querySelector(".contact-form");
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+}
+
+// Register page
+if (document.URL.includes("register.html")) {
+  const registerForm = document.querySelector(".register-form");
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+}
+
+// Pay gage
 
 if (document.URL.includes("pay.html")) {
   const payForm = document.querySelector(".pay-form");
   const inputCard = document.querySelector(".input__card");
   const inputEx = document.querySelector(".input_ex");
+  const inputAmount = document.querySelector(".input__amount");
   const paymentType = document.querySelector(".pay-type");
   // Form validation
-  payForm.addEventListener("submit", function (e) {
-    console.log(123);
-    e.preventDefault();
+  validator(payForm, inputCard, 16);
+  console.log(inputAmount.value);
+  inputAmount.addEventListener("input", (e) => {
+    if (e.target.value < 0) {
+      e.target.style.borderColor = "red";
+      e.target.style.borderWidth = "2px";
+      document.querySelectorAll(".warning")[1].style.opacity = "1";
+    } else {
+      inputAmount.style.borderColor = "#49bcf6";
+      document.querySelectorAll(".warning")[1].style.opacity = "0";
+    }
   });
-
   //Payment type and generating input
+  const inputGenerator = function (html, htmlLabel, className) {
+    if (document.querySelector(`.${className}`) == undefined) {
+      payForm.insertAdjacentHTML("afterbegin", html);
+      payForm.insertAdjacentHTML("afterbegin", htmlLabel);
+    } else {
+      return;
+    }
+  };
   paymentType.addEventListener("change", (e) => {
     let type = e.target.value;
-
     //Mobile
-    if (type == "mobile") {
-      if (document.querySelector(".input-tel") == undefined) {
-        const htmlTel = `
+    const htmlTel = `
         <input
         type="tel"
         class="input input-tel"
         autocomplete="off"
         placeholder="+99 8** *** ** **"
       />`;
-        const htmlLabel = `
+    const htmlLabel = `
       <label class="pay-label">Enter telephone number:</label>`;
-        payForm.insertAdjacentHTML("afterbegin", htmlTel);
-        payForm.insertAdjacentHTML("afterbegin", htmlLabel);
-      } else {
-        return;
-      }
+    if (type == "mobile") {
+      inputGenerator(htmlTel, htmlLabel, "input-tel");
     }
 
     // Electric & Gas & water
     if (type == "electric" || type == "gas" || type == "water") {
-      if (document.querySelector(".input-communal") == undefined) {
-        const htmlCommunal = `
+      const htmlCommunal = `
         <input
         type="tel"
         class="input input-communal"
         autocomplete="off"
         placeholder="*** *** ***"
       />`;
-        const htmlLabel = `
+      const htmlLabel = `
       <label class="pay-label">Enter consumer number:</label>`;
-        payForm.insertAdjacentHTML("afterbegin", htmlCommunal);
-        payForm.insertAdjacentHTML("afterbegin", htmlLabel);
-      } else {
-        return;
-      }
+      inputGenerator(htmlCommunal, htmlLabel, "input-communal");
     }
 
     // education
     if (type == "education") {
-      if (document.querySelector(".uni-education") == undefined) {
-        const htmlEdu = `
+      const htmlEdu = `
         <select class="input uni-type">
           <option>--Please select university--</option>
           <option value="wiut">Westminster International University</option>
           <option value="milliy">National University of Uzbekistan</option>
           <option value="finance">Toshkent Moliya Universiteti</option>
         </select>`;
-        const htmlLabel = `
+      const htmlLabel = `
       <label class="pay-label">Enter consumer number:</label>`;
-        payForm.insertAdjacentHTML("afterbegin", htmlEdu);
-        payForm.insertAdjacentHTML("afterbegin", htmlLabel);
-      } else {
-        return;
-      }
-    }
-  });
+      inputGenerator(htmlEdu, htmlLabel, "uni-education");
 
-  inputCard.addEventListener("input", function () {
-    if (inputCard.value.length > 19) {
-      inputCard.style.borderColor = "tomato";
-    } else {
-      inputCard.style.borderColor = "#49bcf6";
+      const uniType = document.querySelector(".uni-type");
+      uniType.addEventListener("change", (e) => {
+        let type = e.target.value;
+        if (type == "wiut" || type == "milliy" || type == "finance") {
+          const htmlEdu = `
+        <input
+        type="number"
+        class="input input-student"
+        autocomplete="off"
+        placeholder="ID"
+      />`;
+          const htmlLabel = `
+      <label class="pay-label">Enter student ID:</label>`;
+          uniType.insertAdjacentHTML("afterend", htmlEdu);
+          uniType.insertAdjacentHTML("afterend", htmlLabel);
+        }
+      });
     }
   });
 }
