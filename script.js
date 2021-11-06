@@ -24,9 +24,10 @@ const navigation = document.querySelector(".navigation");
 hamburgerIcon.addEventListener("click", function () {
   navigation.classList.toggle("show");
 });
-
-window.addEventListener("load", () => {
-  // navigation.classList.add("hidden");
+document.addEventListener("click", function (event) {
+  if (!navigation.contains(event.target)) {
+    navigation.classList.remove(".show");
+  }
 });
 if (document.URL.includes("about.html")) {
   const slides = document.querySelectorAll(".slide");
