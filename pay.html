@@ -62,17 +62,28 @@
         <div class="img-container">
           <img src="./img/payment.png" alt="payment" class="payment-img" />
         </div>
-        <label class="pay-label" for="pay-type">Choose type of payment:</label>
-        <select class="input pay-type">
-          <option>--Please select payment type--</option>
-          <option value="mobile">Mobile</option>
-          <option value="electric">Electric</option>
-          <option value="gas">Gas</option>
-          <option value="water">Water</option>
-          <option value="education">Education</option>
-          <option value="exchange">Currency exchange</option>
-        </select>
         <form class="pay-form">
+          <label class="pay-label" for="pay-type"
+            >Choose type of payment:</label
+          >
+          <select class="input pay-type">
+            <option>--Please select payment type--</option>
+            <option value="mobile">Mobile</option>
+            <option value="electric">Electric</option>
+            <option value="gas">Gas</option>
+            <option value="water">Water</option>
+            <option value="education">Education</option>
+            <option value="exchange">Currency exchange</option>
+          </select>
+          <label class="pay-label" for="amount">Enter amount:</label>
+
+          <input
+            type="number"
+            class="input input__amount"
+            autocomplete="off"
+            placeholder="Enter amount"
+          />
+          <p class="warning">Please enter a valid amount!</p>
           <label class="pay-label" for="ccn">Credit Card Number:</label>
           <input
             id="ccn"
@@ -89,14 +100,6 @@
             autocomplete="off"
           />
           <p class="warning">Please enter a valid card number!</p>
-          <label class="pay-label" for="amount">Enter amount:</label>
-          <input
-            type="number"
-            class="input input__amount"
-            autocomplete="off"
-            placeholder="Enter amount"
-          />
-          <p class="warning">Please enter a valid amount!</p>
           <button class="btn__primary">Pay</button>
         </form>
       </div>
