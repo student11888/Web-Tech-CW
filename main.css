@@ -412,7 +412,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: var(--color-grey);
+  background-color: var(--color-black);
 }
 
 .footer__box {
