@@ -58,6 +58,7 @@
       </nav>
     </header>
     <section class="pay">
+      <h1 class="heading__primary">Pay Now</h1>
       <div class="pay-container">
         <div class="img-container">
           <img src="./img/payment.png" alt="payment" class="payment-img" />
@@ -66,7 +67,7 @@
           <label class="pay-label" for="pay-type"
             >Choose type of payment:</label
           >
-          <select class="input pay-type">
+          <select id="pay-type" class="input pay-type">
             <option>--Please select payment type--</option>
             <option value="mobile">Mobile</option>
             <option value="electric">Electric</option>
@@ -76,17 +77,17 @@
             <option value="exchange">Currency exchange</option>
           </select>
           <label class="pay-label" for="amount">Enter amount:</label>
-
           <input
             type="number"
             class="input input__amount"
             autocomplete="off"
             placeholder="Enter amount"
+            id="amount"
           />
           <p class="warning">Please enter a valid amount!</p>
-          <label class="pay-label" for="ccn">Credit Card Number:</label>
+          <label class="pay-label" for="card-number">Credit Card Number:</label>
           <input
-            id="ccn"
+            id="card-number"
             type="tel"
             inputmode="numeric"
             placeholder=" Card number"
