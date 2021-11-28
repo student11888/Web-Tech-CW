@@ -11,7 +11,7 @@ User of website can do in this platform:
 5. Money exchange
 
 The website consist of six page.
-Thet are:
+They are:
 
 1. Home
 2. About
