@@ -1,8 +1,9 @@
 // Functions
 const validator = function (form, input, length) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('click', (e) => {
     e.preventDefault();
   });
+  form.childNodes;
   input.addEventListener('input', () => {
     if (
       input.value.length < length ||
@@ -117,10 +118,22 @@ if (document.URL.includes('register.html')) {
 if (document.URL.includes('pay.html')) {
   const payForm = document.querySelector('.pay-form');
   const inputCard = document.querySelector('.input__card');
-  const inputEx = document.querySelector('.input_ex');
+  const inputEx = document.querySelector('.input__ex');
   const inputAmount = document.querySelector('.input__amount');
   const paymentType = document.querySelector('.pay-type');
   // Form validation
+
+  const btn = document.querySelector('.btn__primary');
+  btn.addEventListener('click', () => {
+    if (inputAmount.value == 0 || inputCard.value == 0 || inputEx.value == 0) {
+      inputAmount.style.borderColor = 'red';
+      inputAmount.style.borderWidth = '2px';
+      inputCard.style.borderColor = 'red';
+      inputCard.style.borderWidth = '2px';
+      inputEx.style.borderColor = 'red';
+      inputEx.style.borderWidth = '2px';
+    }
+  });
   validator(payForm, inputCard, 16);
   inputAmount.addEventListener('input', (e) => {
     if (e.target.value < 0) {
