@@ -1,6 +1,5 @@
 # Web-Tech-CW
 
-#-----------------------------------------------------------------
 This is front-end of website for Web Technology module coursework.
 The website name is Fast Pay which is platform where money-related actions will be made.
 User of website can do in this platform:
@@ -12,7 +11,7 @@ User of website can do in this platform:
 5. Money exchange
 
 The website consist of six page.
-Thet are:
+They are:
 
 1. Home
 2. About
