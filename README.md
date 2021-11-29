@@ -30,4 +30,4 @@ Used resources:
 Demo
 
 1. Netlify - https://web-tech-cw.netlify.app/
-2. GitHub Pages -
+2. GitHub Pages - https://student11888.github.io/Web-Tech-CW/index.html
