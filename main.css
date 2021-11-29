@@ -242,7 +242,7 @@ body {
 
 /* Main */
 .main {
-  background-image: url('img/bg.jpg');
+  background-image: url('./img/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .main {
-    background-image: url('img/bg-phone.jpg');
+    background-image: url('./img/bg-phone.jpg');
   }
 }
 /* About */
@@ -890,7 +890,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('img/bg.jpg');
+  background-image: url('./img/bg-reg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

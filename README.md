@@ -26,3 +26,8 @@ Used resources:
 2. SVG illustrations - #https://storyset.com/
 3. Pictures - #https://unsplash.com/
 4. Font - #https://fonts.google.com/
+
+Demo
+
+1. Netlify - https://web-tech-cw.netlify.app/
+2. GitHub Pages -
